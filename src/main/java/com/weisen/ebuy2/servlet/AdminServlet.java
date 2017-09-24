@@ -48,6 +48,7 @@ public class AdminServlet extends HttpServlet {
 			Admin admin=adminList.get(i);
 			if(admin.getUsername().equals(username)&&admin.getPassword().equals(password)) {
 				if(admin.getPermission().equals("y")) {
+					request.getSession().setAttribute("admin", admin);
 					request.getRequestDispatcher("AdminData.jsp").forward(request, response);
 					return;
 				}

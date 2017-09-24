@@ -50,6 +50,7 @@ public class AdminDataServlet extends HttpServlet {
 			case "insert":insert(admin);break;
 			case "delete":delete(admin);break;
 			case "update":update(admin);break;
+			default:break;
 		}
 		request.getRequestDispatcher("AdminData.jsp").forward(request, response);
 		//System.out.println(type+""+username);
